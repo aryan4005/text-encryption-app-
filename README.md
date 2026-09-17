@@ -18,7 +18,7 @@ caesar-cipher-app/
 If the repository already exists on GitHub:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/caesar-cipher-app.git
+git clone https://github.com/aryan4005/caesar-cipher-app.git
 ```
 
 Move into the project:
