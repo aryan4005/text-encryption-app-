@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CRYPTX Caesar Cipher cybersecurity portfolio project">
+    <title>CRYPTX — Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="matrix-bg"></div>
+
+    <header class="navbar">
+        <div class="logo"><span class="logo-icon">⌬</span><span>CRYPT<span class="green">X</span></span></div>
+        <div class="status"><span class="status-dot"></span>SYSTEM ONLINE</div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="badge">CYBERSECURITY TOOL // v1.0</div>
+            <h1>CAESAR <span>CIPHER</span></h1>
+            <p>Encrypt and decrypt your messages using classical cryptographic techniques.</p>
+        </section>
+
+        <section class="app-card">
+            <div class="card-header">
+                <div>
+                    <span class="terminal">root@cryptx:~$</span>
+                    <h2>ENCRYPTION TERMINAL</h2>
+                </div>
+                <div class="security-level"><span>SECURITY</span><strong>CLASSICAL</strong></div>
+            </div>
+
+            <div class="workspace">
+                <div class="input-section">
+                    <div class="section-title"><span class="number">01</span>INPUT MESSAGE</div>
+                    <textarea id="inputText" placeholder="Enter your secret message..." spellcheck="false"></textarea>
+                    <div class="char-count"><span id="charCount">0</span> CHARACTERS</div>
+                </div>
+
+                <div class="controls">
+                    <div class="section-title"><span class="number">02</span>CIPHER CONFIGURATION</div>
+                    <div class="mode-buttons">
+                        <button id="encryptBtn" class="mode active">🔐 ENCRYPT</button>
+                        <button id="decryptBtn" class="mode">🔓 DECRYPT</button>
+                    </div>
+                    <label for="shift">SHIFT KEY</label>
+                    <div class="shift-control">
+                        <button id="minusBtn">−</button>
+                        <input type="number" id="shift" min="0" max="25" value="3">
+                        <button id="plusBtn">+</button>
+                    </div>
+                    <input type="range" id="shiftRange" min="0" max="25" value="3">
+                    <div class="alphabet">
+                        <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span>
+                        <span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span>
+                    </div>
+                    <button id="processBtn" class="process-btn">
+                        <span>⚡</span><span id="processText">EXECUTE ENCRYPTION</span>
+                    </button>
+                </div>
+
+                <div class="output-section">
+                    <div class="section-title"><span class="number">03</span>OUTPUT</div>
+                    <div id="outputBox" class="output-box"><span class="placeholder">Encrypted output will appear here...</span></div>
+                    <button id="copyBtn" class="copy-btn">📋 COPY OUTPUT</button>
+                </div>
+            </div>
+
+            <div class="info-bar">
+                <div><span class="info-icon">ℹ</span>Caesar Cipher shifts each letter by a fixed number of positions in the alphabet.</div>
+                <div class="local">● PROCESSING LOCALLY</div>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <div class="history-header">
+                <div><span class="terminal">~/cryptx/history</span><h2>OPERATION HISTORY</h2></div>
+                <button id="clearHistoryBtn">CLEAR HISTORY</button>
+            </div>
+            <div id="historyList" class="history-list">
+                <div class="empty-history"><span>⌁</span><p>No operations recorded yet.</p></div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="section-title"><span class="number">04</span>HOW IT WORKS</div>
+            <div class="steps">
+                <div class="step"><div class="step-icon">01</div><h3>INPUT</h3><p>Enter the message you want to protect.</p></div>
+                <div class="arrow">→</div>
+                <div class="step"><div class="step-icon">02</div><h3>SHIFT</h3><p>Choose a key from 0 to 25.</p></div>
+                <div class="arrow">→</div>
+                <div class="step"><div class="step-icon">03</div><h3>TRANSFORM</h3><p>Every letter moves through the alphabet.</p></div>
+                <div class="arrow">→</div>
+                <div class="step"><div class="step-icon">04</div><h3>OUTPUT</h3><p>Receive your transformed message.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CRYPTX // CAESAR CIPHER</p>
+        <p>CLIENT-SIDE PROCESSING • NO DATA TRANSMITTED</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
